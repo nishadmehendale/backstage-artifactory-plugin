@@ -16,7 +16,7 @@ export const DenseTable = ({ artifacts }: DenseTableProps) => {
     { title: 'Name', field: 'name' },
     { title: 'path', field: 'path' },
     { title: 'repo', field: 'repo' },
-    { title: 'url', field: 'url', render: (row: any) => <a href={`${jfrogUrl}/${row.repo}/${row.path}/${row.name}`}>{`${jfrogUrl}/${row.repo}/${row.path}/${row.name}`}</a> },
+    { title: 'url', field: 'url', render: (row: any) => <a href={`${jfrogUrl}/${row.repo}/${row.path}/${row.name}`} style={{ color: 'blue', textDecoration: 'underline' }}>{`${jfrogUrl}/${row.repo}/${row.path}/${row.name}`}</a> },
   ];
 
   const data = artifacts.map(artifact => {
